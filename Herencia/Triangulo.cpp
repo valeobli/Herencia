@@ -14,21 +14,20 @@ void Triangulo::setAltura(float altura) {
     this->altura = altura;
 }
 
-float Triangulo::getBase() {
+float Triangulo::getBase() const {
     return base;
 }
 
-float Triangulo::getAltura() {
+float Triangulo::getAltura() const {
     return altura;
 }
 
-float Triangulo::calcularArea() {
+float Triangulo::calcularArea() const {
     return (base * altura) / 2;
 }
 
-void Triangulo::imprimirArea() {
-    cout << "Área del triángulo: " << calcularArea() << endl;
-    cout << "Coordenadas: (" << x << ", " << y << ")" << endl;
+std::string Triangulo::draw() const {
+    return "Soy un triángulo";
 }
 
 Triangulo::~Triangulo() {}

@@ -16,13 +16,13 @@ public:
     void setLados(int lados);
     void setLargo(float largo);
 
-    int getLados();
-    float getLargo();
+    int getLados() const;
+    float getLargo() const;
 
-    float calcularArea();
-    void imprimirArea();
+    float calcularArea() const override;
+    std::string draw() const override;
 
-    virtual ~Poligono();
+    ~Poligono();
 };
 
 #endif // POLIGONO_H

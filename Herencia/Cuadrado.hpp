@@ -12,12 +12,12 @@ public:
     Cuadrado(int x, int y, float lado);
 
     void setLado(float lado);
-    float getLado();
+    float getLado() const;
 
-    float calcularArea();
-    void imprimirArea();
+    float calcularArea() const override;
+    std::string draw() const override;
 
-    virtual ~Cuadrado();
+    ~Cuadrado();
 };
 
 #endif // CUADRADO_H

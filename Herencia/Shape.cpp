@@ -1,47 +1,23 @@
 #include "Shape.hpp"
 
-//Constructor por defecto
-Shape::Shape()
-{
-    x=0;
-    y=0;
+Shape::Shape() : x(0), y(0) {}
+
+Shape::Shape(int x, int y) : x(x), y(y) {}
+
+void Shape::setX(int x) {
+    this->x = x;
 }
 
-//Constructor con parámetros
-Shape::Shape(int x, int y){
-    this->x=x;
-    this->y=y;
+void Shape::setY(int y) {
+    this->y = y;
 }
 
-//Constructor initializer list
-/*Shape::Shape(int cx, int cy):x(cx),y(cy){
-
-}*/
-
-string Shape::draw(){
-    return "Soy una figura ";
-}
-
-void Shape::setX(int x){
-    this->x=x;
-}
-
-int Shape::getX(){
+int Shape::getX() const {
     return x;
 }
 
-void Shape::setY(int y){
-    this->y=y;
-
-}
-
-int Shape::getY(){
+int Shape::getY() const {
     return y;
-
 }
 
-
-Shape::~Shape()
-{
-    //dtor
-}
+Shape::~Shape() {}

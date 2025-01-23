@@ -15,13 +15,13 @@ public:
     void setBase(float base);
     void setAltura(float altura);
 
-    float getBase();
-    float getAltura();
+    float getBase() const;
+    float getAltura() const;
 
-    float calcularArea();
-    void imprimirArea();
+    float calcularArea() const override;
+    std::string draw() const override;
 
-    virtual ~Triangulo();
+    ~Triangulo();
 };
 
 #endif // TRIANGULO_H

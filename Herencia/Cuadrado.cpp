@@ -9,17 +9,16 @@ void Cuadrado::setLado(float lado) {
     this->lado = lado;
 }
 
-float Cuadrado::getLado() {
+float Cuadrado::getLado() const {
     return lado;
 }
 
-float Cuadrado::calcularArea() {
+float Cuadrado::calcularArea() const {
     return lado * lado;
 }
 
-void Cuadrado::imprimirArea() {
-    cout << "Área del cuadrado: " << calcularArea() << endl;
-    cout << "Coordenadas: (" << x << ", " << y << ")" << endl;
+std::string Cuadrado::draw() const {
+    return "Soy un cuadrado";
 }
 
 Cuadrado::~Cuadrado() {}

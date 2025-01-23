@@ -1,33 +1,34 @@
 #include <iostream>
 #include "Shape.hpp"
-#include "Circulo.hpp"
+#include "Circle.hpp"
 #include "Triangulo.hpp"
 #include "Cuadrado.hpp"
 #include "Poligono.hpp"
+#include <list>
 
 using namespace std;
 
 int main() {
-    // Figura genérica
-    Shape f1(10, 20);
-    cout << f1.draw() << "con valor x en: " << f1.getX()
-         << " y valor y en: " << f1.getY() << endl;
+    list<Shape*> shapes;
 
-    // Círculo
-    Circulo c1(10, 20, 5.0);
-    c1.imprimirArea();
+    // Add shapes to the list
+    shapes.push_back(new Circle(10, 20, 5.0));
+    shapes.push_back(new Triangulo(15, 20, 5, 10));
+    shapes.push_back(new Cuadrado(10, 20, 5));
+    shapes.push_back(new Poligono(10, 20, 5, 15));
 
-    // Triángulo
-    Triangulo t1(15, 20, 5, 10);
-    t1.imprimirArea();
+    // Iterate and display the shapes
+    for (Shape* shape : shapes) {
+        cout << shape->draw() << endl;
+        cout << "Área: " << shape->calcularArea() << endl;
+        cout << "Coordenadas: (" << shape->getX() << ", " << shape->getY() << ")" << endl;
+        cout << "----------------------------" << endl;
+    }
 
-    // Cuadrado
-    Cuadrado s1(10, 20, 5);
-    s1.imprimirArea();
-
-    // Polígono 
-    Poligono p1(10, 20, 5, 15);
-    p1.imprimirArea();
+    // Clean up memory
+    for (Shape* shape : shapes) {
+        delete shape;
+    }
 
     return 0;
 }

@@ -14,23 +14,21 @@ void Poligono::setLargo(float largo) {
     this->largo = largo;
 }
 
-int Poligono::getLados() {
+int Poligono::getLados() const {
     return lados;
 }
 
-float Poligono::getLargo() {
+float Poligono::getLargo() const {
     return largo;
 }
 
-float Poligono::calcularArea() {
+float Poligono::calcularArea() const {
     if (lados < 3) return 0;  // Un polígono debe tener al menos 3 lados
     return (lados * largo * largo) / (4 * tan(M_PI / lados));
 }
 
-void Poligono::imprimirArea() {
-    cout << "Área del polígono: " << calcularArea() << endl;
-    cout << "Coordenadas: (" << x << ", " << y << ")" << endl;
+std::string Poligono::draw() const {
+    return "Soy un polígono";
 }
 
 Poligono::~Poligono() {}
-

@@ -1,36 +1,25 @@
 #include "Circle.hpp"
 #include <cmath>
+#include <iostream>
 
-Circle::Circle():Shape()
-{
-    r=0;
+Circle::Circle() : Shape(), r(0) {}
+
+Circle::Circle(int x, int y, float r) : Shape(x, y), r(r) {}
+
+void Circle::setRadio(float r) {
+    this->r = r;
 }
 
-Circle::Circle(int x, int y, float r):Shape(x,y)
-{
-    this->r=r;
-}
-
-void Circle::setRadio(float r){
-    this->r=r;
-}
-
-float Circle::getRadio(){
+float Circle::getRadio() const {
     return r;
 }
 
-float Circle::calculaArea(){
-    return (M_PI*pow(r,2));
+float Circle::calcularArea() const {
+    return M_PI * r * r;
 }
 
-void Circle::imprimeArea(){
-
-    cout<<"El area es: "<<calculaArea();
-    cout<<"Mis coordenadas x e y son: "<<x<<y; //si es private se debe extraer el valor con los gets
+std::string Circle::draw() const {
+    return "Soy un círculo";
 }
 
-
-Circle::~Circle()
-{
-
-}
+Circle::~Circle() {}
