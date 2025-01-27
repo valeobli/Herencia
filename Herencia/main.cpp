@@ -20,7 +20,7 @@ int main() {
    
     for (Shape* shape : shapes) {
         cout << shape->draw() << endl;
-        cout << "Área: " << shape->calcularArea() << endl;
+        cout << "area: " << shape->calcularArea() << endl;
         cout << "Coordenadas: (" << shape->getX() << ", " << shape->getY() << ")" << endl;
         cout << "-" << endl;
     }
