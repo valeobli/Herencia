@@ -16,11 +16,11 @@ public:
     void setX(int x);
     void setY(int y);
 
-    int getX() const;
-    int getY() const;
+    int getX();
+    int getY();
 
-    virtual float calcularArea() const = 0;
-    virtual std::string draw() const = 0;  
+    virtual float calcularArea() = 0;  
+    virtual std::string draw() = 0;   
 
     virtual ~Shape();
 };

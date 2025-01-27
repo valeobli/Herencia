@@ -5,17 +5,17 @@
 
 class Circle : public Shape {
 private:
-    float r;
+    float radio;
 
 public:
     Circle();
-    Circle(int x, int y, float r);
+    Circle(int x, int y, float radio);
 
-    void setRadio(float r);
-    float getRadio() const;
+    void setRadio(float radio);
+    float getRadio();
 
-    float calcularArea() const override;
-    std::string draw() const override;
+    float calcularArea() override;
+    std::string draw() override;
 
     ~Circle();
 };

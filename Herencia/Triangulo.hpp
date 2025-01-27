@@ -15,11 +15,11 @@ public:
     void setBase(float base);
     void setAltura(float altura);
 
-    float getBase() const;
-    float getAltura() const;
+    float getBase();
+    float getAltura();
 
-    float calcularArea() const override;
-    std::string draw() const override;
+    float calcularArea() override;
+    std::string draw() override;
 
     ~Triangulo();
 };

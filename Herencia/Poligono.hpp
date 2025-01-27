@@ -16,11 +16,11 @@ public:
     void setLados(int lados);
     void setLargo(float largo);
 
-    int getLados() const;
-    float getLargo() const;
+    int getLados();
+    float getLargo();
 
-    float calcularArea() const override;
-    std::string draw() const override;
+    float calcularArea() override;
+    std::string draw() override;
 
     ~Poligono();
 };

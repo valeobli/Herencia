@@ -9,15 +9,15 @@ void Cuadrado::setLado(float lado) {
     this->lado = lado;
 }
 
-float Cuadrado::getLado() const {
+float Cuadrado::getLado() {
     return lado;
 }
 
-float Cuadrado::calcularArea() const {
+float Cuadrado::calcularArea() {
     return lado * lado;
 }
 
-std::string Cuadrado::draw() const {
+std::string Cuadrado::draw() {
     return "Soy un cuadrado";
 }
 

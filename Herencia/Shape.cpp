@@ -12,11 +12,11 @@ void Shape::setY(int y) {
     this->y = y;
 }
 
-int Shape::getX() const {
+int Shape::getX() {
     return x;
 }
 
-int Shape::getY() const {
+int Shape::getY() {
     return y;
 }
 

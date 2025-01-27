@@ -1,24 +1,23 @@
 #include "Circle.hpp"
 #include <cmath>
-#include <iostream>
 
-Circle::Circle() : Shape(), r(0) {}
+Circle::Circle() : Shape(), radio(0) {}
 
-Circle::Circle(int x, int y, float r) : Shape(x, y), r(r) {}
+Circle::Circle(int x, int y, float radio) : Shape(x, y), radio(radio) {}
 
-void Circle::setRadio(float r) {
-    this->r = r;
+void Circle::setRadio(float radio) {
+    this->radio = radio;
 }
 
-float Circle::getRadio() const {
-    return r;
+float Circle::getRadio() {
+    return radio;
 }
 
-float Circle::calcularArea() const {
-    return M_PI * r * r;
+float Circle::calcularArea() {
+    return M_PI * radio * radio;
 }
 
-std::string Circle::draw() const {
+std::string Circle::draw() {
     return "Soy un círculo";
 }
 
