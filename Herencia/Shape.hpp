@@ -19,10 +19,10 @@ public:
     int getX() const;
     int getY() const;
 
-    virtual float calcularArea() const = 0; // Pure virtual function
-    virtual std::string draw() const = 0;  // Pure virtual function
+    virtual float calcularArea() const = 0;
+    virtual std::string draw() const = 0;  
 
     virtual ~Shape();
 };
 
-#endif // SHAPE_H
+#endif 

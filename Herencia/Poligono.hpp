@@ -25,4 +25,4 @@ public:
     ~Poligono();
 };
 
-#endif // POLIGONO_H
+#endif 

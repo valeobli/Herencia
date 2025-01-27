@@ -20,4 +20,4 @@ public:
     ~Cuadrado();
 };
 
-#endif // CUADRADO_H
+#endif 

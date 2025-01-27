@@ -24,4 +24,4 @@ public:
     ~Triangulo();
 };
 
-#endif // TRIANGULO_H
+#endif 
